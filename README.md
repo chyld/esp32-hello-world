@@ -27,3 +27,6 @@ idf.py flash monitor
 ```
 
 Press `Ctrl+]` to exit the monitor.
+
+
+idf.py menuconfig
