@@ -18,7 +18,7 @@ docker run --rm -it --device=/dev/ttyACM0 -v $(pwd):/project -w /project -u $(id
 | `--group-add $(getent group uucp \| cut -d: -f3)` | Add the `uucp` group GID to your user inside the container so it can access the serial device |
 | `espressif/idf:v6.0.1` | The ESP-IDF Docker image version |
 
-### Build and Flash
+### Build, Flash and Monitor
 
 ```bash
 idf.py set-target esp32c6   # only needed once, or when switching chips
@@ -34,3 +34,7 @@ idf.py flash monitor
 ```
 
 Press `Ctrl+]` to exit the monitor.
+
+### Partition Table
+
+<img width="3307" height="882" alt="image" src="https://github.com/user-attachments/assets/8436b70f-9476-400a-9fb7-86e2c1654f02" />
