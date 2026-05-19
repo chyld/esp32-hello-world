@@ -22,11 +22,15 @@ docker run --rm -it --device=/dev/ttyACM0 -v $(pwd):/project -w /project -u $(id
 
 ```bash
 idf.py set-target esp32c6   # only needed once, or when switching chips
+
+idf.py menuconfig
+- Serial flasher config - Flash size - 4 MB
+- Partition Table - Partition Table - Custom partition table CSV
+(D) Save Minimal Config
+sdkconfig.defaults # this file should have all your config information
+
 idf.py build
 idf.py flash monitor
 ```
 
 Press `Ctrl+]` to exit the monitor.
-
-
-idf.py menuconfig
